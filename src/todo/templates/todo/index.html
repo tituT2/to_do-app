@@ -1,0 +1,14 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+   {% include 'todo/snippets/todoScreen.html' %}
+{% else %}
+   {% include 'todo/snippets/welcomeScreen.html' %}
+{% endif %}
+
+{% endblock content %}

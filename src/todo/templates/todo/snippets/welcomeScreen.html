@@ -1,0 +1,49 @@
+
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="40000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+  
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#bs-carousel" data-slide-to="1"></li>
+      <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item slides active">
+        <div class="slide-1"></div>
+        <div class="hero">
+          <hgroup>
+              <h1>Todo App</h1>        
+              <h3>Login, don't miss a thing</h3>
+          </hgroup>
+          <a href="{% url 'login' %}">
+           <button class="btn btn-hero btn-lg" role="button">Login</button>
+          </a>
+        </div>
+      </div>
+      <div class="item slides">
+        <div class="slide-2"></div>
+        <div class="hero">        
+          <hgroup>
+              <h1>Be smart</h1>        
+              <h3>write everything you need</h3>
+          </hgroup>       
+          <a href="{% url 'register' %}">
+            <button class="btn btn-hero btn-lg" role="button">Register</button>
+         </a>
+        </div>
+      </div>
+      <div class="item slides">
+        <div class="slide-3"></div>
+        <div class="hero">        
+          <hgroup>
+              <h1>Be amazing</h1>        
+              <h3> don't forget anything</h3>
+          </hgroup>
+        </div>
+      </div>
+    </div> 
+  </div>

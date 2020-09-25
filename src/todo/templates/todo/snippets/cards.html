@@ -1,0 +1,26 @@
+
+
+
+<div class="container">
+  <div class="row">
+      <br/>
+      <br/>
+    <h2>Todos -</h2>
+
+    <hr>
+    <section id="pinBoot">
+        {% for i in list %}
+      <article class="white-panel"> 
+        <h4><a href="#">{{i.title}}</a></h4>
+        <h6 class="text-muted">{{i.date}}</h6>
+        <p style="word-wrap: break-word;" >{{i.details}}</p>
+        <form action="/del/{{i.id}}" method="POST" style=" padding-right: 4%; padding-bottom: 3%;">
+            {% csrf_token %}
+            <button value="remove" type="submit"  class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span> &nbsp; remove</button>
+          </form>
+      </article>
+      {% endfor %}
+
+    </section>
+  </div>
+</div>
